@@ -19,13 +19,15 @@ const Header = () => {
         <li className='font-bold'><Link to={'/services'}>Services</Link></li>
         <li className='font-bold'><Link to={'/'}>Blogs</Link></li>
         <li className='font-bold'><Link to={'/'}>Contact</Link></li>
-        <li className='font-bold'><Link to={'/orders'}>Orders</Link></li>
+
         <li className='font-bold'><Link to={'/'}> Order Review </Link></li>
         <li className='font-bold'><Link to={'/'}> Manage Inventory </Link></li>
 
         {
             user?.uid ? <>
+                <li className='font-bold'><Link to={'/orders'}>Orders</Link></li>
                 <li className='font-bold'><Link onClick={handleSignOut} to={'/login'}>Sign Out</Link></li>
+
             </> :
                 <>
                     <li className='font-bold'><Link to={'/login'}>Login</Link></li>
