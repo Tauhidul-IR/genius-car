@@ -1,0 +1,32 @@
+[
+    {
+        "_id": "01",
+        "title": "Expert Team",
+        "img": "best.svg",
+        "price": "20.00"
+    },
+    {
+        "_id": "02",
+        "title": "24/7 Support",
+        "img": "../src/assets/icons/support.svg",
+        "price": "20.00"
+    },
+    {
+        "_id": "03",
+        "title": "Best Equipment",
+        "img": "../src/assets/icons/best.svg",
+        "price": "20.00"
+    },
+    {
+        "_id": "04",
+        "title": "100% Guranty",
+        "img": "../src/assets/icons/guranty.svg",
+        "price": "20.00"
+    },
+    {
+        "_id": "05",
+        "title": "Timely Delivery",
+        "img": "../src/assets/icons/deliveryt.svg",
+        "price": "20.00"
+    }
+]

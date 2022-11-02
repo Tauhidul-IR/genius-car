@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Car Engine Plug",
+        "img": "https://i.ibb.co/cXTdn3H/6.png",
+        "price": "20.00"
+    },
+    {
+        "title": "Car Air Filter",
+        "img": "https://i.ibb.co/HYQfhZN/3.png",
+        "price": "20.00"
+    },
+    {
+        "title": "Hydrolic break",
+        "img": "https://i.ibb.co/tzVVBV9/1.png",
+        "price": "20.00"
+    },
+    {
+        "title": "Suspention break",
+        "img": "https://i.ibb.co/cgWygzX/2.png",
+        "price": "20.00"
+    },
+    {
+        "title": "Modern tier",
+        "img": "https://i.ibb.co/M7KNBF5/5.png",
+        "price": "20.00"
+    },
+    {
+        "title": "Battery",
+        "img": "https://i.ibb.co/37VJdhP/4.png",
+        "price": "20.00"
+    }
+]
