@@ -67,7 +67,7 @@ const Orders = () => {
                         {
                             orders.map(order => <OrderRow key={order._id} order={order} handleDelete={handleDelete} handleStatusUpdate={handleStatusUpdate}></OrderRow>)
                         }
-                        <h1>hello</h1>
+
 
                     </tbody>
 

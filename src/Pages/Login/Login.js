@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/images/login/login.svg'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import { FaFacebook, FaGithub, FaGoogle } from 'react-icons/fa';
@@ -11,7 +11,12 @@ import { FacebookAuthProvider, GithubAuthProvider, GoogleAuthProvider } from 'fi
 const Login = () => {
 
     const { loginUser, providerLogin } = useContext(AuthContext)
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/'
+
+
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const faceBookProvider = new FacebookAuthProvider();
@@ -25,9 +30,35 @@ const Login = () => {
         loginUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
-                navigate('/')
+
+                const currentUser = {
+                    email: user?.email
+                }
+                console.log(currentUser)
+                // navigate('/')
                 alert('Login SuccessFully')
+
+
+
+                //get JWT token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        //local store in not best place to store token but it is easy.
+                        localStorage.setItem('genius-token', data.token)
+                    })
+
+
+
+
+                // navigate(from, { replace: true })
             })
             .catch(error => console.error(error))
     }
